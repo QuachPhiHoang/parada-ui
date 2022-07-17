@@ -1,0 +1,44 @@
+@import 'normalize.css';
+
+:root {
+    --max-with: 1440px;
+    --primary: rgb(0, 36, 130);
+    --back: #000;
+    --text-color: #272727;
+    --white: #fff;
+    --border-color: #004e49;
+
+    --font-family: 'Libre Baskerville', serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+body {
+    font-weight: 400;
+    font-size: 2.4rem;
+    font-family: var(--font-family);
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    color: var(--text-color);
+    overflow-y: overlay;
+}

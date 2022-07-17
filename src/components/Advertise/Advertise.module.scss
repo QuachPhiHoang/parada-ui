@@ -1,0 +1,29 @@
+.wrapper {
+    height: 51px;
+    background-color: #f9faff;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    line-height: calc(22 / 18);
+}
+
+.link {
+    margin-left: 15px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: calc(22 / 18);
+    color: rgba(0, 57, 143, 1);
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}

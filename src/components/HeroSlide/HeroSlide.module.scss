@@ -1,0 +1,100 @@
+.wrapper {
+    max-width: var(--max-width);
+    position: relative;
+}
+
+.slide {
+    display: flex;
+}
+
+.thumbnail {
+    img {
+        max-width: 771px;
+        width: 100%;
+        object-fit: cover;
+        max-height: 598px;
+    }
+}
+
+.info {
+    position: relative;
+}
+
+.img {
+    img {
+        width: 100%;
+        max-width: 669px;
+        object-fit: cover;
+        max-height: 597.5px;
+    }
+}
+
+.brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+        max-width: 400px;
+        margin-top: 154px;
+        margin-left: 150px;
+    }
+}
+
+.detail {
+    position: absolute;
+    max-width: 375px;
+    top: 266px;
+    left: 172px;
+    font-size: 3.5rem;
+    line-height: calc(59 / 35);
+    font-weight: 700;
+    color: rgba(86, 86, 86, 1);
+}
+
+.description {
+    font-size: 3.5rem;
+    position: absolute;
+    max-width: 375px;
+    top: 328px;
+    left: 258px;
+    color: rgba(86, 86, 86, 1);
+}
+
+.btn {
+    position: absolute;
+    max-width: 375px;
+    top: 386px;
+    left: 300px;
+    background-color: transparent;
+    border: 1px solid #222222;
+    border-radius: 10px;
+    padding: 2px 32px;
+    font-size: 2.4rem;
+    color: rgba(86, 86, 86, 1);
+    cursor: pointer;
+}
+
+.slide-dot {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #c4c4c4;
+}
+
+.active {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #002482;
+}
