@@ -5,9 +5,8 @@ const images = {
     search: require('~/assets/icons/search.svg').default,
     user: require('~/assets/images/user.png'),
     close: require('~/assets/icons/close.svg').default,
-    slider1: require('~/assets/images/slider1.png'),
-    slider2: require('~/assets/images/slider2.png'),
-    brand: require('~/assets/images/brand.svg').default,
+    left: require('~/assets/icons/left.svg').default,
+    right: require('~/assets/icons/right.svg').default,
 };
 
 export default images;

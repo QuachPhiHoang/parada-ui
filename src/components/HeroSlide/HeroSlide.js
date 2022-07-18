@@ -1,36 +1,51 @@
 import styles from './HeroSlide.module.scss';
 import classNames from 'classnames/bind';
+import SlideItem from './SlideItem/SlideItem';
+import slideData from '~/fakeData';
+import { Fragment, useState } from 'react';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
+const data = slideData;
 
 function HeroSlide() {
+    const [slideActive, setSlideActive] = useState(0);
+
+    const nextSlide = () => {
+        const index = slideActive + 1 === data.length ? 0 : slideActive + 1;
+        setSlideActive(index);
+    };
+
+    const prevSlide = () => {
+        const index = slideActive - 1 < 0 ? data.length - 1 : slideActive - 1;
+        setSlideActive(index);
+    };
+
+    const moveDot = () => {};
+
     return (
-        <div className={cx('wrapper')}>
-            <div className={cx('slide')}>
-                <div className={cx('thumbnail')}>
-                    <img srcSet={`${images.slider1} 2x`} alt="" />
-                </div>
-                <div className={cx('info')}>
-                    <div className={cx('img')}>
-                        <img srcSet={`${images.slider2} 2x`} alt="" />
-                    </div>
-                    <div className={cx('title')}>
-                        <div className={cx('brand')}>
-                            <img src={images.brand} alt="" />
-                        </div>
-                        <span className={cx('detail')}>Big Fashion Festival</span>
-                        <span className={cx('description')}>50% - 80% off</span>
-                        <button className={cx('btn')}>Explore</button>
-                    </div>
-                </div>
+        <div className={cx('hero-slider')}>
+            <div className={cx('left-icon')} onClick={prevSlide}>
+                <img src={images.left} alt="left" />
             </div>
-            <div className={cx('slide-dot')}>
-                <div className={cx('active')}></div>
+            {data.map((item, index) => (
+                <SlideItem key={item.id} data={item} active={slideActive === index} />
+            ))}
+            <div className={cx('right-icon')} onClick={nextSlide}>
+                <img src={images.right} alt="right" />
+            </div>
+            <div className={cx(`slide-dot`)}>
+                {Array.from({ length: data.length }).map((item, index) => (
+                    <div
+                        onClick={() => moveDot(index + 1)}
+                        className={cx(`${slideActive === index ? 'active' : 'dot'}`)}
+                    ></div>
+                ))}
+                {/* <div className={cx('dot')}></div>
                 <div className={cx('dot')}></div>
                 <div className={cx('dot')}></div>
                 <div className={cx('dot')}></div>
-                <div className={cx('dot')}></div>
+                <div className={cx('dot')}></div> */}
             </div>
         </div>
     );
