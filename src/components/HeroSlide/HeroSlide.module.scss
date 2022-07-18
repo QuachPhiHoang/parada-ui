@@ -8,11 +8,13 @@
 }
 
 .thumbnail {
+    max-width: 1028px;
+    // width: 100%;
+    // object-fit: cover;
     img {
-        max-width: 771px;
+        // max-width: 1028px;
         width: 100%;
         object-fit: cover;
-        max-height: 598px;
     }
 }
 
@@ -21,30 +23,34 @@
 }
 
 .img {
+    // width: 100%;
+    max-width: 892px;
+    // object-fit: cover;
     img {
         width: 100%;
-        max-width: 669px;
+        // max-width: 892px;
         object-fit: cover;
-        max-height: 597.5px;
     }
 }
 
 .brand {
     position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 533px;
+    top: calc(50% - 126px);
+    left: 50%;
+    transform: translate(-50%, -50%);
     img {
-        max-width: 400px;
-        margin-top: 154px;
-        margin-left: 150px;
+        width: 100%;
+        object-fit: cover;
     }
 }
 
 .detail {
     position: absolute;
-    max-width: 375px;
-    top: 266px;
-    left: 172px;
+    max-width: 501px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3.5rem;
     line-height: calc(59 / 35);
     font-weight: 700;
@@ -54,21 +60,24 @@
 .description {
     font-size: 3.5rem;
     position: absolute;
-    max-width: 375px;
-    top: 328px;
-    left: 258px;
+    max-width: 501px;
+    top: calc(50% + 52px);
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: rgba(86, 86, 86, 1);
+    line-height: calc(59 / 35);
 }
 
 .btn {
     position: absolute;
-    max-width: 375px;
-    top: 386px;
-    left: 300px;
+    max-width: 172px;
+    top: calc(50% + 116px);
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: transparent;
     border: 1px solid #222222;
     border-radius: 10px;
-    padding: 2px 32px;
+    padding: 4px 16px;
     font-size: 2.4rem;
     color: rgba(86, 86, 86, 1);
     cursor: pointer;
