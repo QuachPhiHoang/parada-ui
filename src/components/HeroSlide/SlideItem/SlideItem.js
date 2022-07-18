@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from '../HeroSlide.module.scss';
 import classNames from 'classnames/bind';
 
@@ -27,5 +29,10 @@ function SlideItem({ data, active }) {
         </div>
     );
 }
+
+SlideItem.propTypes = {
+    data: PropTypes.object.isRequired,
+    active: PropTypes.bool,
+};
 
 export default SlideItem;

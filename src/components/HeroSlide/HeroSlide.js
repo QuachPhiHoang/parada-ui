@@ -2,7 +2,7 @@ import styles from './HeroSlide.module.scss';
 import classNames from 'classnames/bind';
 import SlideItem from './SlideItem/SlideItem';
 import slideData from '~/fakeData';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
