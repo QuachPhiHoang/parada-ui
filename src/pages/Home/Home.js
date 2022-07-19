@@ -6,7 +6,7 @@ function Home() {
         <div>
             <Header />
             <Advertise />
-            <HeroSlide />
+            <HeroSlide auto={true} />
         </div>
     );
 }
