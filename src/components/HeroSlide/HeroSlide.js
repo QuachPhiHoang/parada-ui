@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './HeroSlide.module.scss';
 import classNames from 'classnames/bind';
 import SlideItem from './SlideItem/SlideItem';
-import slideData from '~/fakeData';
+import slideData from '~/fakeData/slideData/fakeData';
 import { useEffect, useState, useCallback } from 'react';
 import images from '~/assets/images';
 
@@ -26,7 +26,6 @@ function HeroSlide({ auto }) {
         if (auto) {
             const slideAuto = setInterval(() => {
                 nextSlide();
-                console.log(1);
             }, 3000);
             return () => {
                 clearInterval(slideAuto);

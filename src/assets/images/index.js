@@ -7,6 +7,8 @@ const images = {
     close: require('~/assets/icons/close.svg').default,
     left: require('~/assets/icons/left.svg').default,
     right: require('~/assets/icons/right.svg').default,
+    banner: require('~/assets/images/Banner/Banner1.png'),
+    star: require('~/assets/icons/star.svg').default,
 };
 
 export default images;

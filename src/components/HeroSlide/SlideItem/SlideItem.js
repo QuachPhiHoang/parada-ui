@@ -20,8 +20,8 @@ function SlideItem({ data, active }) {
                         <div className={cx('brand')}>
                             <img src={data.brand} alt="" />
                         </div>
-                        <span className={cx('detail')}>Big Fashion Festival</span>
-                        <span className={cx('description')}>50% - 80% off</span>
+                        <p className={cx('detail')}>Big Fashion Festival</p>
+                        <p className={cx('description')}>50% - 80% off</p>
                         <button className={cx('btn')}>Explore</button>
                     </div>
                 </div>
