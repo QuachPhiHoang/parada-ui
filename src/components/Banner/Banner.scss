@@ -6,9 +6,9 @@
 
 .banner {
     max-width: 2210px;
-    display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0 40px;
+    display: grid !important;
 }
 
 .site {
@@ -21,6 +21,8 @@
 
 .banner-item {
     max-width: 410px;
+    max-height: 423px;
+    cursor: pointer;
 }
 
 .banner-itemactive {
@@ -40,13 +42,14 @@
     font-weight: 700;
     line-height: calc(29 / 24);
     color: var(--text-color);
+    margin-bottom: 5px;
 }
 
 .info {
     display: flex;
     margin-left: 21px;
     align-items: center;
-    margin-bottom: 4px;
+    margin-bottom: 12px;
 }
 
 .description {
@@ -58,7 +61,7 @@
 }
 
 .vote {
-    padding-bottom: 8px;
+    display: flex;
     strong {
         margin-right: 30px;
         font-size: 1.8rem;
@@ -100,4 +103,17 @@
     font-weight: 700;
     line-height: calc(22 / 18);
     color: #0a8200;
+}
+
+//Reset slick slider
+
+.slick-slide {
+    &.slick-cloned {
+        max-width: 410px;
+    }
+}
+
+.slick-track {
+    margin-left: 0;
+    margin-right: 0;
 }

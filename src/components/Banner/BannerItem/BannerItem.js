@@ -1,12 +1,13 @@
-import styles from '../Banner.module.scss';
+import { memo } from 'react';
+import styles from '../Banner.scss';
 import classNames from 'classnames/bind';
 import images from '~/assets/images';
 
 const cx = classNames.bind(styles);
 
-function BannerItem({ data, active }) {
+function BannerItem({ data }) {
     return (
-        <div className={cx(`banner-item${active ? 'active' : ''}`)}>
+        <div className={cx(`banner-item`)}>
             <div className={cx('thumbnail')}>
                 <img srcSet={`${data.image} 2x`} alt="banner" />
             </div>
@@ -27,4 +28,4 @@ function BannerItem({ data, active }) {
     );
 }
 
-export default BannerItem;
+export default memo(BannerItem);

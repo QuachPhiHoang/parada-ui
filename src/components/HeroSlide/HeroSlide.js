@@ -15,7 +15,7 @@ function HeroSlide({ auto }) {
     const nextSlide = useCallback(() => {
         const index = slideActive + 1 === data.length ? 0 : slideActive + 1;
         setSlideActive(index);
-    });
+    }, [slideActive]);
 
     const prevSlide = () => {
         const index = slideActive - 1 < 0 ? data.length - 1 : slideActive - 1;
@@ -31,7 +31,7 @@ function HeroSlide({ auto }) {
                 clearInterval(slideAuto);
             };
         }
-    }, [nextSlide]);
+    }, [nextSlide, auto]);
 
     const moveDot = () => {};
 
