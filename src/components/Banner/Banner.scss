@@ -2,13 +2,7 @@
     max-width: var(--max-width);
     overflow: hidden;
     margin: 80px 50px;
-}
-
-.banner {
-    max-width: 2210px;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0 40px;
-    display: grid !important;
+    width: 2166px;
 }
 
 .site {
@@ -23,10 +17,6 @@
     max-width: 410px;
     max-height: 423px;
     cursor: pointer;
-}
-
-.banner-itemactive {
-    border: 1px solid var(--primary);
 }
 
 .thumbnail {
@@ -103,17 +93,4 @@
     font-weight: 700;
     line-height: calc(22 / 18);
     color: #0a8200;
-}
-
-//Reset slick slider
-
-.slick-slide {
-    &.slick-cloned {
-        max-width: 410px;
-    }
-}
-
-.slick-track {
-    margin-left: 0;
-    margin-right: 0;
 }
